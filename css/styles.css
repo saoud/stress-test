@@ -1,0 +1,20 @@
+/* .hidden {
+  display:none;
+  text-align: center;
+} */
+
+#notGreat {
+  display:none;
+  text-align: center;
+}
+
+#great {
+  display:none;
+  text-align: center;
+}
+
+#seekHelp {
+  display:none;
+  text-align: center;
+}
+

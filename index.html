@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>calculator</title>
+  <title>Stress Test</title>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/scripts.js"></script>
 </head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Stress Test</h2>
+    </div>
+    <form id="stress-test">
+      <div class="effects-stress">
+        <p><br>Check all that apply:</p>
+        <input type="checkbox" name="effects" value="1">Loss of Sleep<br>
+        <input type="checkbox" name="effects" value="1">Feeling Overwhelmed<br>
+        <input type="checkbox" name="effects" value="1">Anxious<br>
+        <input type="checkbox" name="effects" value="1">Restless<br>
+        <input type="checkbox" name="effects" value="1">Loss of appetite.<br>
+      </div>
+      <div class="symptoms">
+        <p><br>Check all that apply:</p>
+        <input type="checkbox" name="symptoms" value="1">High blood pressure<br>
+        <input type="checkbox" name="symptoms" value="1">Restlessness<br>
+        <input type="checkbox" name="symptoms" value="1">Tachycardia<br>
+        <input type="checkbox" name="symptoms" value="1">IBS<br>
+        <input type="checkbox" name="symptoms" value="1">Weight Loss<br>
+      </div>
+      <div class="coping-methods">
+        <p><br>Check all that apply:</p>
+        <input type="checkbox" name="coping-methods" value="-1">Exercise<br>
+        <input type="checkbox" name="coping-methods" value="-1">Drugs<br>
+        <input type="checkbox" name="coping-methods" value="-1">Meditate<br>
+        <input type="checkbox" name="coping-methods" value="-1">Pet a cat<br>
+        <input type="checkbox" name="coping-methods" value="-1">Therapy<br>
+      </div>
+    </form>
+    <br><button type="submit">Submit Survey</button>
+    <h2 class="hidden" id="great">You are doing a great job!</h2>
+    <h2 class="hidden" id="notGreat">Hey you're doing not so great</h2>
+    <h2 class="hidden" id="seekHelp">You may want to go seek help</h2>
+  </div>
+</body>
+</html>

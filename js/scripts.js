@@ -1,23 +1,17 @@
 
 function chooseResult(sum) {
   if (sum < 0) {
-    $('#great').show();
-    $('#notGreat').hide();
-    $('#seekHelp').hide();
+    return "seekHelp"
   } else if (sum >= 0 && sum <6) {
-    $('#notGreat').show();
-    $('#great').hide();
-    $('#seekHelp').hide();
+    return "notGreat"
   } else {
-    $('#seekHelp').show();
-    $('#great').hide();
-    $('#notGreat').hide();
+    return "great"
   }
 }  
 
 $(document).ready(function() {
   $("form#stress-test").submit(function(event) {
-    
+  
     let total=0;
     
     $("input:checkbox[name=effects]:checked").each(function() {
@@ -35,7 +29,20 @@ $(document).ready(function() {
       total += parseInt(number)
     });
 
-    chooseResult(total);
+  if (chooseResult(total) === "notGreat") {
+    $('#notGreat').show();
+    $('#great').hide();
+    $('#seekHelp').hide();
+  } else if (chooseResult(total) === "great") {
+    $('#seekHelp').show();
+    $('#great').hide();
+    $('#notGreat').hide();
+  } else {
+    $('#great').show();
+    $('#notGreat').hide();
+    $('#seekHelp').hide();
+  }
+    // chooseResult(total);
 
     event.preventDefault();
   }); 

@@ -42,7 +42,7 @@ $(document).ready(function() {
     $('#notGreat').hide();
     $('#seekHelp').hide();
   }
-    // chooseResult(total);
+    
 
     event.preventDefault();
   }); 
